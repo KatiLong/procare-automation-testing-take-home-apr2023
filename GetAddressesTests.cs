@@ -59,46 +59,42 @@ public class GetAddressesTests
         Assert.Equal(0, result.Count);
     }
 
-    //[Fact]
-    //public async Task GetAddresses_With_AmbiguousAddress_NoCityProvided_ShouldResultIn_NullResponse()
-    //{
-    //    var result = await this.service.GetAddressesAsync(new AddressFilter { Line1 = "123 Main St", StateCode = "CA" }).ConfigureAwait(false);
+    // -----------------------------------------------------------------------------------
+    // Was not able to fully implement the following tests - getting stuck on how we use built in
+    // Xunit functionality to check for a bad status code(ie a 400 Bad Request), would welcome
+    // any pointers. Made progress with Assert > ThrowsAsync
 
-    //    Assert.Null(result);
-    //    Assert.Equal(System.Net.HttpStatusCode.BadRequest, System.Net.Http.HttpRequestException);
-    //}
-
-    // Both of these tests returned 400, so starting with the assumption that this is the expected behavior &
-    // will confirm this expectation with team
     [Fact]
     public async Task GetAddresses_With_EmptyRequest_ShouldResultIn_ExceptionBeingThrown()
     {
         var result = await this.service.GetAddressesAsync(new AddressFilter { }).ConfigureAwait(false);
 
-        //var response = await Assert.ThrowsAsync<System.Net.HttpStatusCode.BadRequest>(async () => result)
+        // This was my attempt at an assertion checking for a 400 response
+        // Assert.ThrowsAsync<System.Net.HttpStatusCode.BadRequest>(async () => result);
 
-        // var ex = await Assert.ThrowsAsync<HttpException>(async () => await emailController.AppendEmailBase64Dto(testEmailBase64Dto));
-
-        //throw new NotImplementedException();
+        throw new NotImplementedException();
     }
 
-    //[Fact]
-    //public async Task GetAddresses_With_EmptyRequestStrings_ShouldResultIn_ExceptionBeingThrown()
-    //{
-    //    var filter = new AddressFilter {
-    //        Line1 = string.Empty,
-    //        City = string.Empty,
-    //        StateCode = string.Empty,
-    //        CompanyName = string.Empty,
-    //        Line2 = string.Empty,
-    //        Urbanization = string.Empty,
-    //        ZipCodeLeading5 = string.Empty,
-    //        ZipCodeTrailing4 = string.Empty
-    //    };
-    //    var result = await this.service.GetAddressesAsync(filter).ConfigureAwait(false);
+    [Fact]
+    public async Task GetAddresses_With_EmptyRequestStrings_ShouldResultIn_ExceptionBeingThrown()
+    {
+        var filter = new AddressFilter
+        {
+            Line1 = string.Empty,
+            City = string.Empty,
+            StateCode = string.Empty,
+            CompanyName = string.Empty,
+            Line2 = string.Empty,
+            Urbanization = string.Empty,
+            ZipCodeLeading5 = string.Empty,
+            ZipCodeTrailing4 = string.Empty
+        };
+        var result = await this.service.GetAddressesAsync(filter).ConfigureAwait(false);
 
+        // Expect 400 Bad Request (current result)
+        // Was not able to implement Assertion yet
 
-    //}
+        throw new NotImplementedException();
+
+    }
 }
-
-

@@ -27,12 +27,6 @@ public class AddressService
         using (var httpRequest = request.ToHttpRequest(this.BaseUrl))
         using (var response = await HttpClient.SendAsync(httpRequest, HttpCompletionOption.ResponseHeadersRead, token).ConfigureAwait(false))
         {
-            
-            //var data = db.GetThisAddress(requestData); 
-            //var response = new GetAddressesResponse(); //empty object
-            //response.Addresses = data.Addresses; //set the object using what we got from the database
-            //response.Count = data.Addresses.Count;
-            //return response;
 
             response.EnsureSuccessStatusCode();
 
