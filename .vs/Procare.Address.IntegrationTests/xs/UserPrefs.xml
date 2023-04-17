@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{C6641E75-2BEC-4E5E-A37B-5409E9A52734}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AddressFilter.cs">
+    <Files>
+      <File FileName="GetAddressesTests.cs" Line="78" Column="108" />
+      <File FileName="AddressService.cs" Line="27" Column="1" />
+      <File FileName="GetAddressesResponse.cs" Line="13" Column="1" />
+      <File FileName="AddressFilter.cs" Line="48" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Procare.Address.IntegrationTests" expanded="True">
+            <Node name="Procare.Address.IntegrationTests" expanded="True">
+              <Node name="AddressFilter.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Procare.Address.IntegrationTests" expanded="True" selected="True">
+            <Node name="Procare.Address.IntegrationTests" expanded="True">
+              <Node name="Procare.Address.IntegrationTests" expanded="True">
+                <Node name="GetAddressesTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Procare.Address.IntegrationTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
