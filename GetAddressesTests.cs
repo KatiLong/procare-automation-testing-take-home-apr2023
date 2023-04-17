@@ -26,7 +26,7 @@ public class GetAddressesTests
         Assert.NotNull(result); // checks that entire result is not null
         Assert.Equal(1, result.Count); // checks that Addresses returned = 1
         Assert.NotNull(result.Addresses); // checks if no addresses found - valid responses being null or a list (obj, arr, etc)
-        Assert.Equal(result.Count, result.Addresses!.Count); // ! > null forgiving operator, Business Logic Test
+        Assert.Equal(result.Count, result.Addresses!.Count); 
     }
 
     [Fact]
@@ -43,7 +43,6 @@ public class GetAddressesTests
         Assert.True(result.Count > 1);
         Assert.True(result.Addresses.Count > 1);
 
-        // throw new NotImplementedException();
     }
 
     [Fact]
